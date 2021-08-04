@@ -7,7 +7,7 @@ function Forgot() {
 
 
     const callServer = () => {
-         fetch("/auth/forgot-password", {
+         fetch("https://lovebytez.herokuapp.com/auth/forgot-password", {
              method: "Post",
              headers: {
                  'Content-Type': "application/json"

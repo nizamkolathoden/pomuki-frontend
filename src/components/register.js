@@ -8,7 +8,7 @@ function Register() {
     const [name, setName] = useState('');
 
     const call = () => {
-        fetch("/auth/register", {
+        fetch("https://lovebytez.herokuapp.com/auth/register", {
             method: "Post",
             headers: {
                 'Content-Type': "application/json"

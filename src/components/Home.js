@@ -17,7 +17,7 @@ function Root() {
               history.push('/login')
         }
         console.log(user)
-        fetch("/user",{
+        fetch("https://lovebytez.herokuapp.com/user",{
             method:"Get",
             headers:{
                 "Authorization":"Bearer" +' '+ user
@@ -45,7 +45,7 @@ function Root() {
     <div className="input-field col s6">
      <h4 >{`Hola ${userData.name} Your LoveBytez Link`}</h4>   
       <textarea 
-       >{`http://localhost:3000/lovecalculator/${localStorage.getItem('LoveBytezid')}`}</textarea>
+       >{`https://lovebytez-6bdf29.netlify.app/lovecalculator/${localStorage.getItem('LoveBytezid')}`}</textarea>
 
       <button onClick={() => {navigator.clipboard.writeText(`${userData.name} Sent You Special Love Calculator 😍 Check Love Between You and Your Lover =>http://localhost:3000/lovecalculator/${localStorage.getItem('LoveBytezid')}`)}}className="purple darken-1 waves-light btn">copy</button><br/>
 

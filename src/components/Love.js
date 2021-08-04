@@ -13,7 +13,7 @@ function Love() {
 
 
   const Prank = () => {
-    fetch(`/target/${id}`, {
+    fetch(`https://lovebytez.herokuapp.com/target/${id}`, {
       method: "Post",
       headers: {
         "Content-Type": "application/json"

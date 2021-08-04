@@ -10,7 +10,7 @@ function ChangePassword() {
     // console.log(id,token)
 
     const callServer = () => {
-        fetch(`/auth/change-password/${id}/${token}`, {
+        fetch(`https://lovebytez.herokuapp.com/auth/change-password/${id}/${token}`, {
             method: "Post",
             headers: {
                 'Content-Type': "application/json"

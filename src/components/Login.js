@@ -8,7 +8,7 @@ function Login() {
     
 
     const call = () => {
-        fetch("/auth/login", {
+        fetch("https://lovebytez.herokuapp.com/auth/login", {
             method: "Post",
             headers: {
                 'Content-Type': "application/json"
