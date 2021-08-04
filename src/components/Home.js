@@ -47,7 +47,7 @@ function Root() {
       <textarea 
        >{`https://lovebytez-6bdf29.netlify.app/lovecalculator/${localStorage.getItem('LoveBytezid')}`}</textarea>
 
-      <button onClick={() => {navigator.clipboard.writeText(`${userData.name} Sent You Special Love Calculator 😍 Check Love Between You and Your Lover =>http://localhost:3000/lovecalculator/${localStorage.getItem('LoveBytezid')}`)}}className="purple darken-1 waves-light btn">copy</button><br/>
+      <button onClick={() => {navigator.clipboard.writeText(`${userData.name} Sent You Special Love Calculator 😍 Check Love Between You and Your Lover => https://lovebytez-6bdf29.netlify.app/lovecalculator/${localStorage.getItem('LoveBytezid')}`)}}className="purple darken-1 waves-light btn">copy</button><br/>
 
       
       <br/>
