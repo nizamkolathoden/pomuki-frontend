@@ -5,16 +5,19 @@ function Register() {
     const history = useHistory();
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
-    const [name, setName] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+
 
     const call = () => {
-        fetch("https://lovebytez.herokuapp.com/auth/register", {
+        fetch("/user/siginup", {
             method: "Post",
             headers: {
                 'Content-Type': "application/json"
             },
             body:JSON.stringify({
-                name,
+                firstName,
+                lastName,
                 email,
                 password
             })
@@ -24,19 +27,21 @@ function Register() {
                 alert(data.error)
 
             if(data.token){
-                localStorage.setItem("LoveBytez",data.token)
-                localStorage.setItem("LoveBytezid",data.id)
+                localStorage.setItem("YodaYouhou",data.token)
+                localStorage.setItem("YodaYouhouid",data.id)
                 history.push("/")
             }
 
             
+        }).catch(err=>{
+            console.log(err);
         })
     }
 
     return (
         <div>
 
-            <h1>LoveBytez</h1>
+          
             <form onSubmit={e => {
                 e.preventDefault()
                 call()
@@ -45,10 +50,22 @@ function Register() {
                     <div className="input-field col s6">
                         <input id="first_name" type="text" className="validate"
 
-                            onChange={e => setName(e.target.value)}
-                            value={name}
+                            onChange={e => setFirstName(e.target.value)}
+                            value={firstName}
                         />
-                        <label className="active" for="first_name2">Name</label>
+                        <label className="active" for="first_name2">First Name</label>
+                    </div>
+
+                </div>
+
+                <div className="row">
+                    <div className="input-field col s6">
+                        <input id="last_name" type="text" className="validate"
+
+                            onChange={e => setLastName(e.target.value)}
+                            value={lastName}
+                        />
+                        <label className="active" for="first_name2">Last Name</label>
                     </div>
 
                 </div>
@@ -78,7 +95,7 @@ function Register() {
                 </div>
                 <button className="red darken-2 waves-light btn" type='submit'>Register</button>
             </form>
-           <br/> <Link to="/login">Already Have An Account ?</Link>
+           
         </div>
     );
 }

@@ -1,5 +1,6 @@
 {
-  "name": "lovebytez",
+  "proxy":"http://localhost:4000/api/v1",
+  "name": "Yoda Youhou",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -39,4 +40,6 @@
       "last 1 safari version"
     ]
   }
+ 
+
 }
